@@ -3,9 +3,9 @@ on: push
 jobs:
   run:
     runs-on: [ubuntu-latest]
-    #container: docker://dvcorg/cml:0-dvc2-base1
     steps:
       - uses: iterative/setup-cml@v1
+      - uses: iterative/setup-dvc@v1
       - uses: actions/checkout@v2
       - name: Generate metrics report
         env:
