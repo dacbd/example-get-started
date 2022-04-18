@@ -11,6 +11,7 @@ jobs:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cml ci
+          git config --get remote.origin.url
           if [ "$GITHUB_REF" = "refs/heads/main" ] ; then
             PREVIOUS_REF='HEAD~1'
           else
